@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <title>JavaScript Event KeyCodes</title>
+
+    <link rel="preload" href="js/keycodes.js" as="script"/>
+    <link rel="preload" href="js/script.js" as="script"/>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <canvas width="128" height="128" hidden></canvas>
+    <div class="display">
+        <table class="table hide">
+            <thead>
+                <tr>
+                    <th>Key Code</th>
+                    <th>Key</th>
+                </tr>
+            </thead>
+            <tbody class="table-body"></tbody>
+        </table>
+
+        <div class="wrap" aria-live="polite" aria-atomic="true">
+            <p class="text-display">Press any key to get the JavaScript event keycode</p>
+            <p class="keycode-display"></p>
+            <div class="cards active">
+                <div class="card item-key">
+                    <div class="card-header">event.key</div>
+                    <div class="card-main">
+                        <div class="main-description">key</div>
+                    </div>
+                </div>
+                <div class="card item-code">
+                    <div class="card-header">event.code</div>
+                    <div class="card-main">
+                        <div class="main-description">code</div>
+                    </div>
+                </div>
+                <div class="card item-which">
+                    <div class="card-header">
+                        event.which
+                    </div>
+                    <div class="card-main">
+                        <div class="main-description">which</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fixed-buttons">
+            <button id="table-button" onclick={toggleTable()} class="toggle-button">Table</button>
+            <button id="theme-button" onclick={toggleTheme()} class="toggle-button">Light theme</button>
+        </div>
+    </div>
+
+
+    <script src="js/keycodes.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
